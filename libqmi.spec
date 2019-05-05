@@ -4,7 +4,7 @@
 #
 Name     : libqmi
 Version  : 1.22.4
-Release  : 5
+Release  : 6
 URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.22.4.tar.xz
 Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.22.4.tar.xz
 Summary  : QMI modem protocol helper library
@@ -116,7 +116,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1555029908
+export SOURCE_DATE_EPOCH=1557079500
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -135,7 +135,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1555029908
+export SOURCE_DATE_EPOCH=1557079500
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libqmi
 cp COPYING %{buildroot}/usr/share/package-licenses/libqmi/COPYING
