@@ -4,7 +4,7 @@
 #
 Name     : libqmi
 Version  : 1.22.6
-Release  : 7
+Release  : 8
 URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.22.6.tar.xz
 Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.22.6.tar.xz
 Summary  : Library to communicate with QMI-powered modems
