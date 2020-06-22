@@ -872,6 +872,7 @@ libqmi-glib.so.5:qmi_indication_uim_card_status_output_ref
 libqmi-glib.so.5:qmi_indication_uim_card_status_output_unref
 libqmi-glib.so.5:qmi_indication_uim_slot_status_output_get_physical_slot_information
 libqmi-glib.so.5:qmi_indication_uim_slot_status_output_get_physical_slot_status
+libqmi-glib.so.5:qmi_indication_uim_slot_status_output_get_slot_eid_information
 libqmi-glib.so.5:qmi_indication_uim_slot_status_output_get_type
 libqmi-glib.so.5:qmi_indication_uim_slot_status_output_ref
 libqmi-glib.so.5:qmi_indication_uim_slot_status_output_unref
@@ -2737,6 +2738,7 @@ libqmi-glib.so.5:qmi_message_uim_get_file_attributes_output_unref
 libqmi-glib.so.5:qmi_message_uim_get_slot_status_output_get_physical_slot_information
 libqmi-glib.so.5:qmi_message_uim_get_slot_status_output_get_physical_slot_status
 libqmi-glib.so.5:qmi_message_uim_get_slot_status_output_get_result
+libqmi-glib.so.5:qmi_message_uim_get_slot_status_output_get_slot_eid_information
 libqmi-glib.so.5:qmi_message_uim_get_slot_status_output_get_type
 libqmi-glib.so.5:qmi_message_uim_get_slot_status_output_ref
 libqmi-glib.so.5:qmi_message_uim_get_slot_status_output_unref
