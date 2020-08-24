@@ -1,4 +1,34 @@
 
+Overview of changes in libqmi 1.26.4
+----------------------------------------
+
+ * libqmi-glib:
+   ** Avoid including qmi-version.h in build, as its contents depend on the
+      specific build details.
+   ** Early error out all transactions when the endpoint hangup is detected.
+   ** Avoid reporting warnings when forwarding responses to proxy clients if
+      the client is already disconnected.
+
+ * qmicli:
+   ** Fix double-free issues in the slot status indication handling.
+
+ * Several other minor improvements and fixes.
+
+
+Overview of changes in libqmi 1.26.2
+----------------------------------------
+
+ * libqmi-glib:
+   ** Fix QMI response message building when assertions are disabled in the
+      build.
+   ** Added new 5G signal TLVs in "NAS Get Signal Info".
+
+ * qmicli:
+   ** Add missing quote when listing card states in --uim-get-card-status.
+
+ * Several other minor improvements and fixes.
+
+
 Overview of changes in libqmi 1.26.0
 ----------------------------------------
 
