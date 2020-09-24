@@ -4,7 +4,7 @@
 #
 Name     : libqmi
 Version  : 1.26.4
-Release  : 19
+Release  : 20
 URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.26.4.tar.xz
 Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.26.4.tar.xz
 Summary  : Library to communicate with QMI-powered modems
