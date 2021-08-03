@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x3CAD53398973FFFA (aleksander@aleksander.es)
 #
 Name     : libqmi
-Version  : 1.28.6
-Release  : 26
-URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.28.6.tar.xz
-Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.28.6.tar.xz
-Source1  : https://www.freedesktop.org/software/libqmi/libqmi-1.28.6.tar.xz.asc
+Version  : 1.28.8
+Release  : 27
+URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.28.8.tar.xz
+Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.28.8.tar.xz
+Source1  : https://www.freedesktop.org/software/libqmi/libqmi-1.28.8.tar.xz.asc
 Summary  : Library to communicate with QMI-powered modems
 Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.1
@@ -113,23 +113,23 @@ man components for the libqmi package.
 
 
 %prep
-%setup -q -n libqmi-1.28.6
-cd %{_builddir}/libqmi-1.28.6
+%setup -q -n libqmi-1.28.8
+cd %{_builddir}/libqmi-1.28.8
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1622817942
+export SOURCE_DATE_EPOCH=1628002330
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export FCFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export FFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=4 -fno-semantic-interposition "
+export CFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -141,11 +141,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1622817942
+export SOURCE_DATE_EPOCH=1628002330
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libqmi
-cp %{_builddir}/libqmi-1.28.6/COPYING %{buildroot}/usr/share/package-licenses/libqmi/4cc77b90af91e615a64ae04893fdffa7939db84c
-cp %{_builddir}/libqmi-1.28.6/COPYING.LIB %{buildroot}/usr/share/package-licenses/libqmi/01a6b4bf79aca9b556822601186afab86e8c4fbf
+cp %{_builddir}/libqmi-1.28.8/COPYING %{buildroot}/usr/share/package-licenses/libqmi/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-licenses/libqmi/01a6b4bf79aca9b556822601186afab86e8c4fbf
 %make_install
 
 %files
