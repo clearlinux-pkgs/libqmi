@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x3CAD53398973FFFA (aleksander@aleksander.es)
 #
 Name     : libqmi
-Version  : 1.28.8
-Release  : 27
-URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.28.8.tar.xz
-Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.28.8.tar.xz
-Source1  : https://www.freedesktop.org/software/libqmi/libqmi-1.28.8.tar.xz.asc
+Version  : 1.30.0
+Release  : 28
+URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.30.0.tar.xz
+Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.0.tar.xz
+Source1  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.0.tar.xz.asc
 Summary  : Library to communicate with QMI-powered modems
 Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.1
@@ -113,15 +113,15 @@ man components for the libqmi package.
 
 
 %prep
-%setup -q -n libqmi-1.28.8
-cd %{_builddir}/libqmi-1.28.8
+%setup -q -n libqmi-1.30.0
+cd %{_builddir}/libqmi-1.30.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1628002330
+export SOURCE_DATE_EPOCH=1628177366
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -141,11 +141,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1628002330
+export SOURCE_DATE_EPOCH=1628177366
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libqmi
-cp %{_builddir}/libqmi-1.28.8/COPYING %{buildroot}/usr/share/package-licenses/libqmi/4cc77b90af91e615a64ae04893fdffa7939db84c
-cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-licenses/libqmi/01a6b4bf79aca9b556822601186afab86e8c4fbf
+cp %{_builddir}/libqmi-1.30.0/COPYING %{buildroot}/usr/share/package-licenses/libqmi/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/libqmi-1.30.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/libqmi/01a6b4bf79aca9b556822601186afab86e8c4fbf
 %make_install
 
 %files
@@ -170,6 +170,7 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/include/libqmi-glib/qmi-compat.h
 /usr/include/libqmi-glib/qmi-device.h
 /usr/include/libqmi-glib/qmi-dms.h
+/usr/include/libqmi-glib/qmi-dpm.h
 /usr/include/libqmi-glib/qmi-dsd.h
 /usr/include/libqmi-glib/qmi-enum-types.h
 /usr/include/libqmi-glib/qmi-enums-dms.h
@@ -197,6 +198,7 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/include/libqmi-glib/qmi-flags64-loc.h
 /usr/include/libqmi-glib/qmi-flags64-nas.h
 /usr/include/libqmi-glib/qmi-flags64-types.h
+/usr/include/libqmi-glib/qmi-flags64-wds.h
 /usr/include/libqmi-glib/qmi-gas.h
 /usr/include/libqmi-glib/qmi-gms.h
 /usr/include/libqmi-glib/qmi-loc.h
@@ -224,6 +226,7 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 %defattr(0644,root,root,0755)
 /usr/share/gtk-doc/html/libqmi-glib/QmiClient.html
 /usr/share/gtk-doc/html/libqmi-glib/QmiClientDms.html
+/usr/share/gtk-doc/html/libqmi-glib/QmiClientDpm.html
 /usr/share/gtk-doc/html/libqmi-glib/QmiClientDsd.html
 /usr/share/gtk-doc/html/libqmi-glib/QmiClientGas.html
 /usr/share/gtk-doc/html/libqmi-glib/QmiClientGms.html
@@ -260,6 +263,7 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-26.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-28-6.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-28.html
+/usr/share/gtk-doc/html/libqmi-glib/api-index-1-30.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-4.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-6.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-8.html
@@ -295,6 +299,7 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/ch17.html
 /usr/share/gtk-doc/html/libqmi-glib/ch18.html
 /usr/share/gtk-doc/html/libqmi-glib/ch19.html
+/usr/share/gtk-doc/html/libqmi-glib/ch20.html
 /usr/share/gtk-doc/html/libqmi-glib/home.png
 /usr/share/gtk-doc/html/libqmi-glib/index.html
 /usr/share/gtk-doc/html/libqmi-glib/left-insensitive.png
@@ -364,6 +369,8 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-DMS-Validate-Service-Programming-Code-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-DMS-Write-User-Data-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-DMS-enumerations-and-flags.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-DPM-Close-Port-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-DPM-Open-Port-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-DSD-Get-APN-Info-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-DSD-Set-APN-Type-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-DSD-enumerations-and-flags.html
@@ -418,6 +425,7 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Get-LTE-Cphy-CA-Info-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Get-Operator-Name-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Get-PLMN-Name-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Get-Preferred-Networks-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Get-RF-Band-Information-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Get-Serving-System-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Get-Signal-Info-request.html
@@ -428,6 +436,7 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Get-Technology-Preference-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Get-Tx-Rx-Info-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Initiate-Network-Register-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Network-Reject-indication.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Network-Scan-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Network-Time-indication.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Operator-Name-indication.html
@@ -435,6 +444,7 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Reset-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Serving-System-indication.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Set-Event-Report-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Set-Preferred-Networks-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Set-System-Selection-Preference-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Set-Technology-Preference-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-NAS-Signal-Info-indication.html
@@ -502,7 +512,9 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-UIM-Card-Status-indication.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-UIM-Change-PIN-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-UIM-Change-Provisioning-Session-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-UIM-Depersonalization-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-UIM-Get-Card-Status-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-UIM-Get-Configuration-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-UIM-Get-File-Attributes-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-UIM-Get-Slot-Status-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-UIM-Get-Supported-Messages-request.html
@@ -528,13 +540,17 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Cancel-USSD-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Dial-Call-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-End-Call-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Get-Call-Waiting-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Get-Config-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Get-Supported-Messages-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Indication-Register-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Manage-Calls-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Originate-USSD-No-Wait-indication.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Originate-USSD-No-Wait-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Originate-USSD-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Release-USSD-indication.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Set-Supplementary-Service-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Supplementary-Service-indication.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-USSD-indication.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-Version-and-feature-checks.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-Voice-enumerations-and-flags.html
@@ -607,7 +623,7 @@ cp %{_builddir}/libqmi-1.28.8/COPYING.LIB %{buildroot}/usr/share/package-license
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libqmi-glib.so.5
-/usr/lib64/libqmi-glib.so.5.7.0
+/usr/lib64/libqmi-glib.so.5.8.0
 
 %files libexec
 %defattr(-,root,root,-)
