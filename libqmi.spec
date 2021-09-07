@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x3CAD53398973FFFA (aleksander@aleksander.es)
 #
 Name     : libqmi
-Version  : 1.30.0
-Release  : 28
-URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.30.0.tar.xz
-Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.0.tar.xz
-Source1  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.0.tar.xz.asc
+Version  : 1.30.2
+Release  : 29
+URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.30.2.tar.xz
+Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.2.tar.xz
+Source1  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.2.tar.xz.asc
 Summary  : Library to communicate with QMI-powered modems
 Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.1
@@ -113,15 +113,15 @@ man components for the libqmi package.
 
 
 %prep
-%setup -q -n libqmi-1.30.0
-cd %{_builddir}/libqmi-1.30.0
+%setup -q -n libqmi-1.30.2
+cd %{_builddir}/libqmi-1.30.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1628177366
+export SOURCE_DATE_EPOCH=1631026334
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -141,11 +141,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1628177366
+export SOURCE_DATE_EPOCH=1631026334
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libqmi
-cp %{_builddir}/libqmi-1.30.0/COPYING %{buildroot}/usr/share/package-licenses/libqmi/4cc77b90af91e615a64ae04893fdffa7939db84c
-cp %{_builddir}/libqmi-1.30.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/libqmi/01a6b4bf79aca9b556822601186afab86e8c4fbf
+cp %{_builddir}/libqmi-1.30.2/COPYING %{buildroot}/usr/share/package-licenses/libqmi/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/libqmi-1.30.2/COPYING.LIB %{buildroot}/usr/share/package-licenses/libqmi/01a6b4bf79aca9b556822601186afab86e8c4fbf
 %make_install
 
 %files
@@ -263,6 +263,7 @@ cp %{_builddir}/libqmi-1.30.0/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-26.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-28-6.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-28.html
+/usr/share/gtk-doc/html/libqmi-glib/api-index-1-30-2.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-30.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-4.html
 /usr/share/gtk-doc/html/libqmi-glib/api-index-1-6.html
@@ -540,6 +541,7 @@ cp %{_builddir}/libqmi-1.30.0/COPYING.LIB %{buildroot}/usr/share/package-license
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Cancel-USSD-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Dial-Call-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-End-Call-request.html
+/usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Get-All-Call-Info-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Get-Call-Waiting-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Get-Config-request.html
 /usr/share/gtk-doc/html/libqmi-glib/libqmi-glib-VOICE-Get-Supported-Messages-request.html

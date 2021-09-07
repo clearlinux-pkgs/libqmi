@@ -398,6 +398,8 @@ libqmi-glib.so.5:qmi_client_voice_dial_call
 libqmi-glib.so.5:qmi_client_voice_dial_call_finish
 libqmi-glib.so.5:qmi_client_voice_end_call
 libqmi-glib.so.5:qmi_client_voice_end_call_finish
+libqmi-glib.so.5:qmi_client_voice_get_all_call_info
+libqmi-glib.so.5:qmi_client_voice_get_all_call_info_finish
 libqmi-glib.so.5:qmi_client_voice_get_call_waiting
 libqmi-glib.so.5:qmi_client_voice_get_call_waiting_finish
 libqmi-glib.so.5:qmi_client_voice_get_config
@@ -3262,6 +3264,12 @@ libqmi-glib.so.5:qmi_message_voice_end_call_output_get_result
 libqmi-glib.so.5:qmi_message_voice_end_call_output_get_type
 libqmi-glib.so.5:qmi_message_voice_end_call_output_ref
 libqmi-glib.so.5:qmi_message_voice_end_call_output_unref
+libqmi-glib.so.5:qmi_message_voice_get_all_call_info_output_get_call_information
+libqmi-glib.so.5:qmi_message_voice_get_all_call_info_output_get_remote_party_number
+libqmi-glib.so.5:qmi_message_voice_get_all_call_info_output_get_result
+libqmi-glib.so.5:qmi_message_voice_get_all_call_info_output_get_type
+libqmi-glib.so.5:qmi_message_voice_get_all_call_info_output_ref
+libqmi-glib.so.5:qmi_message_voice_get_all_call_info_output_unref
 libqmi-glib.so.5:qmi_message_voice_get_call_waiting_input_get_service_class
 libqmi-glib.so.5:qmi_message_voice_get_call_waiting_input_get_type
 libqmi-glib.so.5:qmi_message_voice_get_call_waiting_input_new
