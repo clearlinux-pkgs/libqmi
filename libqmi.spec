@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x3CAD53398973FFFA (aleksander@aleksander.es)
 #
 Name     : libqmi
-Version  : 1.30.2
-Release  : 29
-URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.30.2.tar.xz
-Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.2.tar.xz
-Source1  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.2.tar.xz.asc
+Version  : 1.30.4
+Release  : 30
+URL      : https://www.freedesktop.org/software/libqmi/libqmi-1.30.4.tar.xz
+Source0  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.4.tar.xz
+Source1  : https://www.freedesktop.org/software/libqmi/libqmi-1.30.4.tar.xz.asc
 Summary  : Library to communicate with QMI-powered modems
 Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.1
@@ -113,15 +113,15 @@ man components for the libqmi package.
 
 
 %prep
-%setup -q -n libqmi-1.30.2
-cd %{_builddir}/libqmi-1.30.2
+%setup -q -n libqmi-1.30.4
+cd %{_builddir}/libqmi-1.30.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1631026334
+export SOURCE_DATE_EPOCH=1644596075
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -141,11 +141,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1631026334
+export SOURCE_DATE_EPOCH=1644596075
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libqmi
-cp %{_builddir}/libqmi-1.30.2/COPYING %{buildroot}/usr/share/package-licenses/libqmi/4cc77b90af91e615a64ae04893fdffa7939db84c
-cp %{_builddir}/libqmi-1.30.2/COPYING.LIB %{buildroot}/usr/share/package-licenses/libqmi/01a6b4bf79aca9b556822601186afab86e8c4fbf
+cp %{_builddir}/libqmi-1.30.4/COPYING %{buildroot}/usr/share/package-licenses/libqmi/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/libqmi-1.30.4/COPYING.LIB %{buildroot}/usr/share/package-licenses/libqmi/01a6b4bf79aca9b556822601186afab86e8c4fbf
 %make_install
 
 %files
